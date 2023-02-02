@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+
+int main(){
+	setlocale(LC_ALL,"Portuguese_Brazil");
+	
+	char frase[300];
+	char caractere;
+	int  quantidade=0;
+	
+	printf("Digite uma frase qualquer :\n");
+    gets(frase);
+
+	
+	printf("Digite uma letra para procura:");
+	scanf("%c",&caractere);
+	
+	for(int j=0; j<300; j++ ){
+		if(frase[j]==caractere){
+		quantidade++;	
+		}
+		
+	}
+	printf("A sua frase é:");
+	puts(frase);
+	printf("Seu caractere %c se repetiu %d vezes na frase ", caractere,quantidade);
+  return 0;
+}
